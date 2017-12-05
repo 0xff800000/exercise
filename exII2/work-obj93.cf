@@ -1,0 +1,10 @@
+v 4
+file . "dff.vhd" "b31b7f52f80c9e5ef98a277f14fdeca777f50b60" "20171122085525.968":
+  entity dff at 2( 18) + 0 on 4;
+  architecture rtl of dff at 16( 277) + 0 on 4;
+file . "async_counter.vhd" "395d73d8417f7e43ad96989de580405323c1945b" "20171122085525.968":
+  entity async_counter at 2( 28) + 0 on 4;
+  architecture rtl of async_counter at 15( 278) + 0 on 4;
+file . "async_counter_tb.vhd" "271a3e226cce3cc2f75719b3ae26f13be859d8b7" "20171122085525.968":
+  entity async_counter_tb at 2( 31) + 0 on 4;
+  architecture bench_direct of async_counter at 9( 158) + 0 on 4;

@@ -1,0 +1,10 @@
+v 4
+file . "johnsonNbit.vhd" "820027191fc445ea241321c8aae6a1f1fbfdfd5d" "20171122072700.827":
+  entity johnsonnbit_rtl at 2( 26) + 0 on 4;
+  architecture rtl of johnsonnbit_rtl at 14( 281) + 0 on 4;
+file . "johnson4bit.vhd" "54b981f99c603839f4e8e4c0782e4b5f24e5824d" "20171117155455.339":
+  entity johnson4bit_rtl at 2( 26) + 0 on 11;
+  architecture rtl of johnson4bit_rtl at 14( 281) + 0 on 12;
+file . "johnson_tb.vhd" "9578d63e6e1a124404662052b9b9d0ce1b8e6d17" "20171117155455.352":
+  entity johnson_tb at 2( 38) + 0 on 13;
+  architecture bench_direct of johnson_tb at 9( 159) + 0 on 14;
