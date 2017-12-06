@@ -26,7 +26,7 @@ init: force
 	# /usr/local/lib/ghdl/v93/ieee/../../src/ieee/numeric_std-body.v93
 	# /usr/local/lib/ghdl/v93/ieee/../../src/ieee/math_real.vhdl
 	# /usr/local/lib/ghdl/v93/ieee/../../src/ieee/math_real-body.vhdl
-	$(GHDL) -a $(GHDLFLAGS) async_counter.vhd
+	$(GHDL) -a $(GHDLFLAGS) async_corr.vhd
 	$(GHDL) -a $(GHDLFLAGS) async_counter_tb.vhd
 
 force:

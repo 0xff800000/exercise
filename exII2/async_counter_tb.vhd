@@ -14,7 +14,7 @@ architecture bench_direct of async_counter_tb is
 	signal out_tb : std_logic := '0';
 begin
 	DUV : entity work.async_counter
-		generic map (M => 4)
+		generic map (M => 1)
 		port map (
 			clk_i => clk_tb,
 			rst_i => res_tb,
