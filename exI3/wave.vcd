@@ -1,5 +1,5 @@
 $date
-  Wed Nov 22 08:17:39 2017
+  Mon Dec 11 22:25:14 2017
 $end
 $version
   GHDL v0
@@ -18,10 +18,27 @@ $var reg 8 & in_i[7:0] $end
 $var reg 2 ' cmd_i[1:0] $end
 $var reg 3 ( amt_i[2:0] $end
 $var reg 8 ) out_o[7:0] $end
-$var reg 8 * right_part[7:0] $end
-$var reg 8 + lsr_res[7:0] $end
-$var reg 8 , asr_res[7:0] $end
-$var reg 8 - rr_res[7:0] $end
+$comment right_part is not handled $end
+$comment lsr_res is not handled $end
+$comment asr_res is not handled $end
+$comment rr_res is not handled $end
+$var integer 32 * mat_index $end
+$scope module for1(0) $end
+$upscope $end
+$scope module for1(1) $end
+$upscope $end
+$scope module for1(2) $end
+$upscope $end
+$scope module for1(3) $end
+$upscope $end
+$scope module for1(4) $end
+$upscope $end
+$scope module for1(5) $end
+$upscope $end
+$scope module for1(6) $end
+$upscope $end
+$scope module for1(7) $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 #0
@@ -34,10 +51,7 @@ b11001110 &
 bUU '
 bUUU (
 b00000000 )
-b11001110 *
-b11001110 +
-b11001110 ,
-b11001110 -
+b0 *
 #10000000
 b11001110 "
 b11001110 #
@@ -63,9 +77,7 @@ b001 %
 b00 '
 b001 (
 b01100111 )
-b01100111 +
-b11100111 ,
-b01100111 -
+b1 *
 #65000000
 #70000000
 b11100111 "
@@ -89,10 +101,7 @@ b010 %
 b00 '
 b010 (
 b00110011 )
-b11001100 *
-b00110011 +
-b11110011 ,
-b10110011 -
+b10 *
 #110000000
 #115000000
 b11110011 "
@@ -116,10 +125,7 @@ b011 %
 b00 '
 b011 (
 b00011001 )
-b11001000 *
-b00011001 +
-b11111001 ,
-b11011001 -
+b11 *
 #155000000
 #160000000
 b11111001 "
@@ -143,10 +149,7 @@ b100 %
 b00 '
 b100 (
 b00001100 )
-b11000000 *
-b00001100 +
-b11111100 ,
-b11101100 -
+b100 *
 #200000000
 #205000000
 b11111100 "
@@ -170,9 +173,7 @@ b101 %
 b00 '
 b101 (
 b00000110 )
-b00000110 +
-b11111110 ,
-b01110110 -
+b101 *
 #245000000
 #250000000
 b11111110 "
@@ -196,9 +197,7 @@ b110 %
 b00 '
 b110 (
 b00000011 )
-b00000011 +
-b11111111 ,
-b00111011 -
+b110 *
 #290000000
 #295000000
 b11111111 "
@@ -222,9 +221,7 @@ b111 %
 b00 '
 b111 (
 b00000001 )
-b10000000 *
-b00000001 +
-b10011101 -
+b111 *
 #335000000
 #340000000
 b11111111 "

@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity encoder8to3_combAlgo is
-generic (N : integer);
+generic (N : integer := 4);
 port (
 	signal req : in std_logic_vector((2**N - 1) downto 0);
 	signal code : out std_logic_vector(N-1 downto 0);
@@ -13,15 +13,15 @@ end entity encoder8to3_combAlgo;
 
 
 architecture comb of encoder8to3_combAlgo is
-type std_logic_matrix is array (integer range <>) of std_logic_vector(req'range);
+	type std_logic_matrix is array (integer range <>) of std_logic_vector(req'range);
 
-signal code_s : std_logic_vector(code'range);
-signal valid_s : std_logic;
+	signal code_s : std_logic_vector(code'range);
+	signal valid_s : std_logic;
 
-signal mask : std_logic_matrix(code'range);
-signal compute : std_logic_matrix(code'range);
+	signal mask : std_logic_matrix(code'range);
+	signal compute : std_logic_matrix(code'range);
 
-signal valid_out : std_logic_matrix(req'range);
+	signal valid_out : std_logic_matrix(req'range);
 signal check_valid : std_logic_vector(req'range);
 begin
 
