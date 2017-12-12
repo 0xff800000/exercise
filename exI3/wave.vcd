@@ -1,5 +1,5 @@
 $date
-  Mon Dec 11 22:25:14 2017
+  Tue Dec 12 09:16:00 2017
 $end
 $version
   GHDL v0
@@ -24,20 +24,36 @@ $comment asr_res is not handled $end
 $comment rr_res is not handled $end
 $var integer 32 * mat_index $end
 $scope module for1(0) $end
+$scope module if2 $end
+$upscope $end
 $upscope $end
 $scope module for1(1) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(2) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(3) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(4) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(5) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(6) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $scope module for1(7) $end
+$scope module if1 $end
+$upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end

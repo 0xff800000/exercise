@@ -21,16 +21,25 @@ architecture rtl of barrelshift8_rtl2 is-- Shift right logic
 	--signal right_part,lsr_res,asr_res,rr_res : std_logic_vector(in_i'range); -- Procedural
 begin
 	FOR1 : for i in in_i'range generate
-		-- Create right part - common for all ops
-		right_part(i)(in_i'high downto i) <= in_i(in_i'high downto i);
-		right_part(i)(i-1 downto in_i'low) <= (i-1 downto in_i'low => '0');
-		-- Logic shift right
-		lsr_res(i) <= (i-1 downto in_i'low => '0') & right_part(i)(in_i'high downto i);
-		-- Arithmetic shift right
-		asr_res(i) <= (i-1 downto in_i'low => in_i(in_i'high)) & right_part(i)(in_i'high downto i);
-		-- Rotate right
-		rr_res(i) <= in_i(i-1 downto in_i'low) & right_part(i)(in_i'high downto i);
+		IF1 : if i > 0 generate
+			-- Create right part - common for all ops
+			right_part(i)(in_i'high downto i) <= in_i(in_i'high downto i);
+			right_part(i)(i-1 downto in_i'low) <= (i-1 downto in_i'low => '0');
+			-- Logic shift right
+			lsr_res(i) <= (i-1 downto in_i'low => '0') & right_part(i)(in_i'high downto i);
+			-- Arithmetic shift right
+			asr_res(i) <= (i-1 downto in_i'low => in_i(in_i'high)) & right_part(i)(in_i'high downto i);
+			-- Rotate right
+			rr_res(i) <= in_i(i-1 downto in_i'low) & right_part(i)(in_i'high downto i);
+		end generate IF1;
+		IF2 : if i = 0 generate
+			right_part(i) <= in_i;
+			lsr_res(i) <= in_i;
+			asr_res(i) <= in_i;
+			rr_res(i) <= in_i;
+		end generate IF2;
 	end generate FOR1;
+
 
 	mat_index <= to_integer(unsigned(amt_i));
 
